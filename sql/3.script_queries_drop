@@ -1,0 +1,12 @@
+-- Quais os produtos com preço superior a 100?
+SELECT * 
+FROM Produtos 
+WHERE Preco > 100;
+
+-- Atualização da quantidade de um produto em um pedido
+UPDATE ItensVenda SET Quantidade = 2 
+WHERE Venda_ID = 1 AND Produto_ID = 1;
+
+-- Remover um produto do estoque
+DELETE FROM Produtos 
+WHERE ID = 5;

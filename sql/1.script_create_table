@@ -1,0 +1,35 @@
+-- Criação das Tabelas
+CREATE TABLE Clientes (
+    ID INT PRIMARY KEY,
+    Nome VARCHAR(100),
+    Email VARCHAR(100),
+    Data_Cadastro DATE
+);
+
+CREATE TABLE Produtos (
+    ID INT PRIMARY KEY,
+    Nome VARCHAR(100),
+    Categoria VARCHAR(50),
+    Preco DECIMAL(10, 2)
+);
+
+CREATE TABLE Vendas (
+    ID INT PRIMARY KEY,
+    Cliente_ID INT,
+    Data_Venda DATE,
+    Total DECIMAL(10, 2),
+    FOREIGN KEY (Cliente_ID) REFERENCES Clientes(ID)
+);
+
+CREATE TABLE ItensVenda (
+    ID INT PRIMARY KEY,
+    Venda_ID INT,
+    Produto_ID INT,
+    Quantidade INT,
+    Preco_Unitario DECIMAL(10, 2),
+    FOREIGN KEY (Venda_ID) REFERENCES Vendas(ID),
+    FOREIGN KEY (Produto_ID) REFERENCES Produtos(ID)
+);
+
+-- Exemplo de consulta pedida: Produtos com preço superior a 100
+SELECT * FROM Produtos WHERE Preco > 100;

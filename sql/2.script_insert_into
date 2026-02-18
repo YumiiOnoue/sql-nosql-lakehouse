@@ -1,0 +1,31 @@
+-- Script para inserir dados na tabela Clientes
+INSERT INTO Clientes (ID, Nome, Email, Data_Cadastro) VALUES
+(1, 'Maria Silva', 'maria.silva@email.com', '2026-01-10'),
+(2, 'Carlos Oliveira', 'carlos.oliveira@email.com', '2026-01-15'),
+(3, 'Joana Souza', 'joana.souza@email.com', '2026-02-01'),
+(4, 'Diogo Santos', 'diogo.santos@email.com', '2026-02-05'),
+(5, 'Giovana Ramos', 'giovana.ramos@email.com', '2026-02-10');
+
+-- Script para inserir dados na tabela Produtos
+INSERT INTO Produtos (ID, Nome, Categoria, Preco) VALUES
+(1, 'Mouse Sem Fio', 'Periféricos', 89.90),
+(2, 'Teclado Mecânico', 'Periféricos', 250.00),
+(3, 'Monitor 24pol', 'Monitores', 899.00),
+(4, 'Cabo HDMI 2m', 'Acessórios', 45.00),
+(5, 'Headset Gamer', 'Áudio', 320.00);
+
+-- Script para inserir dados na tabela Vendas
+INSERT INTO Vendas (ID, Cliente_ID, Data_Venda, Total) VALUES
+(1, 1, '2026-02-15', 339.90),
+(2, 2, '2026-02-16', 899.00),
+(3, 3, '2026-02-16', 45.00),
+(4, 1, '2026-02-17', 250.00),
+(5, 5, '2026-02-18', 320.00);
+
+-- Script para inserir dados na tabela ItensVenda
+INSERT INTO ItensVenda (ID, Venda_ID, Produto_ID, Quantidade, Preco_Unitario) VALUES
+(1, 1, 1, 1, 89.90),
+(2, 1, 2, 1, 250.00),
+(3, 2, 3, 1, 899.00),
+(4, 3, 4, 1, 45.00),
+(5, 4, 2, 1, 250.00);
