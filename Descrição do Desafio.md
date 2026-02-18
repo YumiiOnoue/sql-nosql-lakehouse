@@ -60,3 +60,6 @@ A empresa deseja centralizar os dados em uma solução Data Lakehouse, integrand
 * Justificativas e exemplos para os bancos NoSQL.
 * Desenho da Arquitetura de Data Lakehouse.
 * Explicação das tecnologias escolhidas.
+
+---
+*Desafio do Módulo de Fundamentos de Dados Relacionais e NoSQL - Pós Graduação em Data Analytics (FIAP)*
