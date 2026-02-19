@@ -1,4 +1,4 @@
-# sql-nosql-lakehouse
+# Sistema Híbrido de Dados: Integração SQL, NoSQL e Data Lakehouse
 ## Sobre o Projeto
 Este projeto simula um cenário real de uma empresa de tecnologia que necessita gerenciar estoque, transações de vendas e comportamento de clientes utilizando uma arquitetura híbrida. O objetivo é demonstrar a aplicação prática de modelagem relacional para operações críticas, bancos NoSQL para necessidades específicas de escala e flexibilidade, e a consolidação de dados em um Data Lakehouse para fins analíticos.
 
@@ -42,13 +42,13 @@ Centralização de dados brutos e refinados para BI e Machine Learning.
 
 ```
 ├── arquitetura/
-|   └── arquitetura_data_lakehouse   #
+|   └── arquitetura_data_lakehouse   # Detalhamento técnico da estratégia de camadas e integração de dados
 ├── img/
 |   ├── MER.png                      # Diagrama de Entidade-Relacionamento
 |   ├── grafo_cliente_produto.png    # Grafo relacional entre cliente e produto
 |   └── diagrama_lakehouse.png       # Arquitetura do Lakehouse
 ├── modelagem/ 
-|   └── modelo_entidade_relacional   #
+|   └── modelo_entidade_relacional   # Documentação dos conceitos, entidades e regras de negócio do modelo SQL
 ├── sql/
 │   ├── 1.script_create_table.sql    # DDL - Estrutura do banco
 │   ├── 2.script_insert_into.sql     # DML - Dados iniciais
@@ -68,7 +68,7 @@ Centralização de dados brutos e refinados para BI e Machine Learning.
 ```
 
 ## Como Executar
-Siga os passos abaixo para configurar o ambiente e executar os notebooks em sua máquina local utilizando o PowerShell:
+Siga os passos abaixo para configurar o ambiente e executar os notebooks em sua máquina local:
 
 **Clone o repositório:**
 
@@ -98,3 +98,5 @@ pip install -r requirements.txt
 **Execute os Notebooks:**
 * Abra o VS Code ou Jupyter Lab e execute os arquivos na pasta nosql/ para ver as simulações NoSQL em funcionamento.
 
+---
+Desenvolvido por: Erica Yumi Onoue
