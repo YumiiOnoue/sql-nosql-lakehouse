@@ -6,6 +6,7 @@ O projeto foi desenvolvido como parte do desafio do módulo de Fundamentos de Da
 
 ## Arquitetura da Solução
 **1. Camada Relacional (SQL)**
+
 Utilizada para o controle operacional e garantia de integridade transacional (ACID).
 
 * **Modelo Entidade-Relacionamento (MER):** Estruturado com tabelas de Clientes, Produtos, Vendas e Itens de Venda.
@@ -13,6 +14,7 @@ Utilizada para o controle operacional e garantia de integridade transacional (AC
 +2
 
 **2. Camada NoSQL (Poliglota)**
+
 Para atender requisitos que o modelo relacional não supre com eficiência, foram implementados quatro modelos NoSQL:
 
 Necessidade | Banco Escolhido | Justificativa Técnica
@@ -23,6 +25,7 @@ Grafos | Neo4j | Eficiência em percorrer relacionamentos complexos para motores
 Colunas | Cassandra | Otimização de escrita e leitura em massa para logs de acesso distribuídos.
 
 **3. Data Lakehouse**
+
 Centralização de dados brutos e refinados para BI e Machine Learning.
 
 * **Raw Zone (Bronze):** Dados brutos do SQL e NoSQL.
