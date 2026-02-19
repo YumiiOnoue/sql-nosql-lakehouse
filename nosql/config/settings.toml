@@ -1,0 +1,4 @@
+[astradb]
+api_endpoint = "https://3964e24c-c342-41f7-9788-e784d5679981-us-east-2.apps.astra.datastax.com"
+keyspace = "default_keyspace"
+collection_name = "logs_acesso"
