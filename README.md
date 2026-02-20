@@ -11,7 +11,6 @@ Utilizada para o controle operacional e garantia de integridade transacional (AC
 
 * **Modelo Entidade-Relacionamento (MER):** Estruturado com tabelas de Clientes, Produtos, Vendas e Itens de Venda.
 * **Operações:** Scripts automatizados para criação de tabelas, inserção de dados e consultas de negócio (ex: filtragem de produtos por preço e atualização de estoque).
-+2
 
 **2. Camada NoSQL (Poliglota)**
 
@@ -30,20 +29,21 @@ Centralização de dados brutos e refinados para BI e Machine Learning.
 
 * **Raw Zone (Bronze):** Dados brutos do SQL e NoSQL.
 * **Cleansed Zone (Prata):** Dados limpos, padronizados e enriquecidos.
-* **Business Zone (Ouro):** Agregados e otimizados para consumo em ferramentas como Power BI e Google BigQuery.
+* **Business Zone (Ouro):** Agregados e otimizados para consumo em ferramentas como Power BI.
 
 ## Tecnologias Utilizadas
 * **Linguagens:** Python e SQL.
 * **Bancos e Bibliotecas:** 
-    * mongomock: Simulação de MongoDB para testes locais.
-    * fakeredis: Simulação de servidor Redis em memória.
-    * networkx: Modelagem e visualização de estruturas de grafos.
-    * astrapy: Integração real com Apache Cassandra via DataStax Astra DB.
-* **Configuração:** Uso de arquivos .toml para gestão segura de segredos e configurações de ambiente.
+    * `mongomock`: Simulação de MongoDB para testes locais.
+    * `fakeredis`: Simulação de servidor Redis em memória.
+    * `networkx`: Modelagem e visualização de estruturas de grafos.
+    * `astrapy`: Integração real com Apache Cassandra via DataStax Astra DB.
+* **Configuração:** Uso de arquivos `.toml` para gestão segura de segredos e configurações de ambiente.
 
 ## Estrutura do Repositório
 
 ```
+
 ├── arquitetura/
 |   └── arquitetura_data_lakehouse   # Detalhamento técnico da estratégia de camadas e integração de dados
 ├── img/
@@ -75,31 +75,31 @@ Siga os passos abaixo para configurar o ambiente e executar os notebooks em sua 
 
 **Clone o repositório:**
 
-```PowerShell
+```
 git clone https://github.com/YumiiOnoue/sql_nosql_lakehouse.git
 cd sql_nosql_lakehouse
 ```
 
 **Crie e ative um ambiente virtual (Recomendado):**
 
-```PowerShell
+```
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 ```
 
 **Instale as dependências a partir do requirements.txt:**
 
-```PowerShell
+```
 pip install -r requirements.txt
 ```
 
 **Configuração de Segredos:**
-* Navegue até a pasta config/.
+* Navegue até a pasta `config/`.
 * Renomeie o arquivo `.secrets.toml`.
 * Insira suas credenciais do Astra DB (Cassandra) para habilitar o notebook de logs.
 
 **Execute os Notebooks:**
-* Abra o VS Code ou Jupyter Lab e execute os arquivos na pasta nosql/ para ver as simulações NoSQL em funcionamento.
+* Abra o VS Code ou Jupyter Lab e execute os arquivos na pasta `nosql/` para ver as simulações NoSQL em funcionamento.
 
 ---
 Desenvolvido por: Erica Yumi Onoue
