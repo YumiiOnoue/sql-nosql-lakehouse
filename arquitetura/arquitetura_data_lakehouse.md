@@ -11,4 +11,5 @@ O objetivo desta arquitetura é centralizar dados operacionais (SQL), semiestrut
 * **Processamento**: Apache Spark ou Databricks para as transformações entre camadas.
 * **Consulta**: Amazon Athena ou Google BigQuery para análises rápidas via SQL.
 
-![Data Lakehouse](img/diagrama_lakehouse.png)
+## Diagrama Data Lakehouse
+![Data Lakehouse](../img/diagrama_lakehouse.png)
