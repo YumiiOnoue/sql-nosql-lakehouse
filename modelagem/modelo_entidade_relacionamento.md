@@ -12,4 +12,5 @@ O modelo relacional foi projetado para garantir a integridade referencial e o su
 * **Vendas -> ItensVenda**: 1:N (Uma venda pode conter vários produtos).
 * **Produtos -> ItensVenda**: 1:N (Um produto pode aparecer em diferentes itens de venda).
 
-![Diagrama MER](img/MER.png)
+## Diagrama MER
+![Diagrama MER](../img/MER.png)
