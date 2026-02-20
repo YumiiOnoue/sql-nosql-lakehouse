@@ -13,3 +13,13 @@ O objetivo desta arquitetura é centralizar dados operacionais (SQL), semiestrut
 
 ## Diagrama Data Lakehouse
 ![Data Lakehouse](../img/diagrama_lakehouse.png)
+
+## Fluxo de Integração entre Camadas
+A integração ocorre de forma fluida através de pipelines de dados que movem a informação do estado bruto para o valor de negócio. Para essa integração, foram utilizadas as seguintes ferramentas: **Amazon S3** (Armazenamento), **Apache Spark** (Processamento) e **Amazon Athena** (Consulta).
+
+Logo abaixo, detalhamos o fluxo utilizando essas ferramentas:
+
+* **Ingestão (Raw -> Bronze):** O Apache Spark extrai os dados dos bancos operacionais (SQL e NoSQL) e os deposita no Amazon S3 na camada Bronze em seu formato original para garantir um histórico imutável.
+* **Processamento (Bronze -> Prata):** O Spark lê os arquivos da Bronze, realiza a limpeza (remoção de duplicatas, tratamento de nulos e tipos) e converte os dados para o formato Parquet (colunar), salvando-os na camada Prata do S3 para maior eficiência de leitura.
+* **Refinamento (Prata -> Gold):** O Spark aplica as regras de negócio, como o cálculo de KPIs de vendas e agregações por perfil de cliente, salvando os dados finais na camada Ouro.
+* **Consumo (Analytics):** O Amazon Athena cataloga esses dados da camada Ouro, permitindo que ferramentas de BI (como o Power BI) ou analistas realizem consultas SQL instantâneas sobre os dados refinados, concluindo o ciclo do Lakehouse.
