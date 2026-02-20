@@ -209,3 +209,4 @@ __marimo__/
 # Config secrets
 config/.secrets.toml
 .env
+**/.secrets.toml
