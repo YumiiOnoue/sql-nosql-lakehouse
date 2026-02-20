@@ -1,0 +1,4 @@
+[astradb]
+api_endpoint = "SEU_ENDPOINT_AQUI"
+keyspace = "default_keyspace"
+collection_name = "logs_acesso"
