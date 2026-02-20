@@ -210,3 +210,4 @@ __marimo__/
 config/.secrets.toml
 .env
 **/.secrets.toml
+**/settings.toml
